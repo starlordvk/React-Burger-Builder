@@ -38,8 +38,8 @@ class BurgerBuilder extends Component {
             return sum +el;
         }, 0);
         
-        this.setState({purchaseable: sum>0});
-    }
+        this.setState({purchaseable: sum > 0});
+    };
 
     //add ingredient and change the total price on click of more button
     addIngredientHandler = (type) => {
@@ -53,7 +53,7 @@ class BurgerBuilder extends Component {
         this.setState({ingredients : updateIngredients, totalPrice : newPrice});
         this.updatePurchaseStateHandler(updateIngredients);
 
-    }
+    };
 
     //remove ingredient and change the total price on click of less button
     removeIngredientHandler = (type) => {
@@ -69,7 +69,7 @@ class BurgerBuilder extends Component {
         const newPrice = oldPrice - priceDeduction;
         this.setState({ingredients : updateIngredients, totalPrice : newPrice});
         this.updatePurchaseStateHandler(updateIngredients);
-    }
+    };
 
     purchaseHandler = () => {
         this.setState({purchasing : true});
